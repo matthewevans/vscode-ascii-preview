@@ -26,6 +26,17 @@ This extension contributes the following settings:
 
 ![Sample Screenshot](screencap.png?raw=true "Screenshot")
 
+## Requirements
+
+~~~
+git clone https://github.com/matthewevans/vscode-ascii-preview.git
+cd vscode-ascii-preview
+npm install
+~~~
+
+* Open folder in VSCode
+* Press F5 to try it out. (Ignore warning from asciify-image types file)
+
 ## Other Extensions
 
 * [vscode-textinfo](https://github.com/matthewevans/vscode-textinfo) - offers estimated remaining reading time as well as source code comment annotation markup that calculates estimated readability grade level.
