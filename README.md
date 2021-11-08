@@ -22,3 +22,7 @@ This extension contributes the following settings:
 * `asciiPreview.width`: Horizontal dimension. 'box' and 'width' respect this value.
 * `asciiPreview.height`: Vertical dimension. 'box' and 'height' respect this value.
 
+## Sample
+
+![Sample Screenshot](screencap.png?raw=true "Screenshot")
+
