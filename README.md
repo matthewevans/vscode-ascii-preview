@@ -26,3 +26,8 @@ This extension contributes the following settings:
 
 ![Sample Screenshot](screencap.png?raw=true "Screenshot")
 
+## Other Extensions
+
+* [vscode-textinfo](https://github.com/matthewevans/vscode-textinfo) - offers estimated remaining reading time as well as source code comment annotation markup that calculates estimated readability grade level.
+
+
