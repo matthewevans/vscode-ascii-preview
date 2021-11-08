@@ -1,6 +1,6 @@
 # ascii-image-preview README
 
-Inspired from the VSCode Image Preview extension, this takes it a step further and displays any image opened as ASCII text. Utilizes the [asciify-image](https://github.com/ajay-gandhi/asciify-image) npm library.
+Derived from the VSCode Image Preview extension, this takes it a step further and displays any image opened as ASCII text. Utilizes the [asciify-image](https://github.com/ajay-gandhi/asciify-image) npm library.
 
 ## Features
 
