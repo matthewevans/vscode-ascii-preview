@@ -1,0 +1,103 @@
+{
+	"name": "ascii-image-preview",
+	"displayName": "ASCII Image Preview",
+	"description": "Image Preview but shows the image as ASCII art.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.62.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCustomEditor:asciiPreview.previewEditor",
+		"onCommand:asciiPreview.zoomIn",
+		"onCommand:asciiPreview.zoomOut"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"customEditors": [
+			{
+				"viewType": "asciiPreview.previewEditor",
+				"displayName": "ASCII Image Preview",
+				"priority": "default",
+				"selector": [
+					{
+						"filenamePattern": "*.{jpg,png,gif}"
+					}
+				]
+			}
+		],
+		"commands": [
+			{
+				"command": "asciiPreview.zoomIn",
+				"title": "Zoom In",
+				"category": "ASCII Preview"
+			},
+			{
+				"command": "asciiPreview.zoomOut",
+				"title": "Zoom Out",
+				"category": "ASCII Preview"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "asciiPreview.zoomIn",
+					"when": "activeCustomEditorId == 'asciiPreview.previewEditor'",
+					"group": "1_asciiPreview"
+				},
+				{
+					"command": "asciiPreview.zoomOut",
+					"when": "activeCustomEditorId == 'asciiPreview.previewEditor'",
+					"group": "1_asciiPreview"
+				}
+			]
+		},
+		"configuration": {
+			"title": "ASCII Preview Configuration",
+			"properties": {
+				"asciiPreview.fit": {
+					"type": "string",
+					"description": "Type of fit to use when generating ASCII. Options are 'original', 'width', 'height'. 'original' will ignore dimension parameters.",
+					"default": "width"
+				},
+				"asciiPreview.width": {
+					"type": "number | string",
+					"description": "The width to resize the image to before generating.",
+					"default": 70
+				},
+				"asciiPreview.height": {
+					"type": "number | string",
+					"description": "The height to resize the image to before generating.",
+					"default": 42
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.62.0",
+		"@typescript-eslint/eslint-plugin": "^5.1.0",
+		"@typescript-eslint/parser": "^5.1.0",
+		"@vscode/test-electron": "^1.6.2",
+		"eslint": "^8.1.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3",
+		"typescript": "^4.4.4"
+	},
+	"dependencies": {
+		"asciify-image": "^0.1.8",
+		"vscode-nls": "^5.0.0"
+	}
+}
