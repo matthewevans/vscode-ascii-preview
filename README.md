@@ -19,5 +19,6 @@ npm
 This extension contributes the following settings:
 
 * `asciiPreview.fit`: Type of fit to use when generating ASCII. Options are 'box', 'original', 'width', 'height'. 'original' will ignore dimension parameters. Default is 'width' to keep it small.
-* `asciiPreview.width`: 
-* `asciiPreview.height`: 
+* `asciiPreview.width`: Horizontal dimension. 'box' and 'width' respect this value.
+* `asciiPreview.height`: Vertical dimension. 'box' and 'height' respect this value.
+
